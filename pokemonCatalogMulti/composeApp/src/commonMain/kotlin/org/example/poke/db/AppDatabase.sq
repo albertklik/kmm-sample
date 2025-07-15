@@ -1,0 +1,17 @@
+CREATE TABLE FavoritePokemonEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    imageUrl TEXT NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO FavoritePokemonEntity(id, name, imageUrl) VALUES (?, ?, ?);
+
+deleteById:
+DELETE FROM FavoritePokemonEntity WHERE id = ?;
+
+selectAll:
+SELECT * FROM FavoritePokemonEntity;
+
+selectById:
+SELECT EXISTS (SELECT 1 FROM FavoritePokemonEntity WHERE id = ?);
