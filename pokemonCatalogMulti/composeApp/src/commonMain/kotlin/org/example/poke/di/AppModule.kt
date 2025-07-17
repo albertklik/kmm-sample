@@ -2,16 +2,13 @@ package org.example.poke.di
 
 import org.koin.core.module.Module
 import org.koin.dsl.module
-import data.remote.PokemonApi
-import data.repository.PokemonRepositoryImpl
-import domain.repository.PokemonRepository
-import presentation.favorites.FavoritesScreenModel
-import presentation.list.PokemonListScreenModel
-import platform.DatabaseDriverFactory
-import com.example.project.db.AppDatabase
 import org.example.poke.data.remote.PokemonApi
 import org.example.poke.db.AppDatabase
+import org.example.poke.domain.repository.PokemonRepository
+import org.example.poke.domain.repository.PokemonRepositoryImpl
 import org.example.poke.platform.DatabaseDriverFactory
+import org.example.poke.presentation.favorites.FavoritesScreenModel
+import org.example.poke.presentation.list.PokemonListScreenModel
 
 // Módulo para dependências de dados (API, DB, Repositório)
 val dataModule = module {
@@ -20,7 +17,7 @@ val dataModule = module {
         val driver = get<DatabaseDriverFactory>().createDriver()
         AppDatabase(driver)
     }
-    single<PokemonRepository> { PokemonRepositoryImpl(get(), get()) }
+    single<PokemonRepository> { PokemonRepositoryImpl(get(),get()) }
 }
 
 // Módulo para os ScreenModels (ViewModels)

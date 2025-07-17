@@ -45,6 +45,7 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -62,15 +63,12 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose.viewmodel)
 
-            implementation(libs.voyager.core)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.koin)
-            implementation(libs.voyager.transitions)
-            implementation(libs.voyager.screenmodel)
-
             implementation(libs.sqldelight.runtime)
             implementation(libs.sqldelight.coroutines.extensions)
             implementation(libs.kotlinx.coroutines.core)
+
+            implementation(libs.bundles.voyager.common)
+            implementation(libs.kamel.image)
         }
     }
 }
@@ -84,11 +82,11 @@ sqldelight {
 }
 
 android {
-    namespace = "com.jetbrains.kmpapp"
+    namespace = "org.example.poke"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.jetbrains.kmpapp"
+        applicationId = "org.example.poke"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

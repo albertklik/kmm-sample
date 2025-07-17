@@ -1,6 +1,6 @@
 package org.example.poke.domain.repository
 
-import domain.model.Pokemon
+import org.example.poke.domain.model.Pokemon
 
 interface PokemonRepository {
     suspend fun getPokemonList(page: Int): Result<List<Pokemon>>
