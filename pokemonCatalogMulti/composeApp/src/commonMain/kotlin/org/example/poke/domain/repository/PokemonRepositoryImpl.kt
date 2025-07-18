@@ -34,7 +34,7 @@ class PokemonRepositoryImpl(
             val pokemon = Pokemon(
                 id = details.id,
                 name = details.name.replaceFirstChar { it.uppercase() },
-                imageUrl = details.sprites.other.official_artwork.front_default,
+                imageUrl = details.sprites.front_default,
                 isFavorite = isFavorite
             )
             Result.success(pokemon)

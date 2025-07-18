@@ -2,6 +2,7 @@ package org.example.poke
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.List
@@ -61,7 +62,7 @@ object FavoritesTab : Tab {
     }
 }
 
-@OptIn(KoinExperimentalAPI::class)
+@OptIn(KoinExperimentalAPI::class, ExperimentalMaterialApi::class)
 @Composable
 @Preview
 fun App() {

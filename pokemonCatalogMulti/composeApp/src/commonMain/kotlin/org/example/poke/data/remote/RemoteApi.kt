@@ -19,13 +19,13 @@ data class PokemonResult(val name: String, val url: String)
 data class PokemonDetailsResponse(val id: Int, val name: String, val sprites: Sprites)
 
 @Serializable
-data class Sprites(val other: OtherSprites)
+data class Sprites(val front_default: String)
 
-@Serializable
-data class OtherSprites(val official_artwork: OfficialArtwork)
+//@Serializable
+//data class OtherSprites(val official_artwork: OfficialArtwork)
 
-@Serializable
-data class OfficialArtwork(val front_default: String)
+//@Serializable
+//data class OfficialArtwork(val front_default: String)
 
 
 // API Client
